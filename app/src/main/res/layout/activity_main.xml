@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:padding="16dp"
+                tools:ignore="HardcodedText,RtlSymmetry,RtlHardcoded,SpUsage,ContentDescription">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/relativeLayout2">
+
+        <EditText
+            android:inputType="text|textNoSuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_centerVertical="true"
+            android:hint="Insert color here"
+            android:maxLength="8"
+            android:digits="0123456abcef"
+            android:layout_toEndOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="#"
+            android:id="@+id/textView"
+            android:layout_alignTop="@+id/editText"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/editText"
+            android:gravity="center_vertical"
+            android:textSize="22dp"
+            android:paddingLeft="15dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
