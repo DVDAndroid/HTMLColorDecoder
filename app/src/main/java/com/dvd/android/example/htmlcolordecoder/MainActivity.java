@@ -28,12 +28,14 @@ public class MainActivity extends Activity {
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
 				if (et.getText().toString() != null) {
-                    et.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+					et.setTextColor(getResources().getColor(
+							android.R.color.holo_green_dark));
 					try {
-						iv.setBackgroundColor(Color.parseColor("#" + et.getText()
-								.toString()));
+						iv.setBackgroundColor(Color.parseColor("#"
+								+ et.getText().toString()));
 					} catch (IllegalArgumentException e) {
-                        et.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+						et.setTextColor(getResources().getColor(
+								android.R.color.holo_red_dark));
 						iv.setBackgroundColor(Color.parseColor("#ffffff"));
 					}
 				} else {
